@@ -45,7 +45,7 @@ class RedisDataLoader {
     ////////////////////////////////////////////////////////////////////////////
     private function loadFor($fileNameStr, $nbOfChars){
         echo "\nLoading Database For: ".$nbOfChars." characters\n";
-        echo "Start Time: ". date("i:sa")."\n";
+        echo "Start Time: ". date("h:i:s A")."\n";
         //fileNameStr validated in loadData()
         
         //Validate $nbOfChars
@@ -65,7 +65,7 @@ class RedisDataLoader {
         foreach($keys as $key) {
             $this->redis->set($key, $frequency_array[$key]);
         }
-        echo "End Time: ". date("i:s")."\n";
+        echo "End Time: ". date("h:i:s A")."\n";
     }
 
     
